@@ -439,6 +439,10 @@ func serviceResourceName(service string) string {
 	return fmt.Sprintf("%sService", normalizeResourceName(service))
 }
 
+func volumeResourceName(volume string) string {
+	return fmt.Sprintf("%sVolume", normalizeResourceName(volume))
+}
+
 func normalizeResourceName(s string) string {
 	return strings.Title(regexp.MustCompile("[^a-zA-Z0-9]+").ReplaceAllString(s, ""))
 }
